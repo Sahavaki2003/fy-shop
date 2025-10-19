@@ -1,0 +1,31 @@
+html
+  head
+    title Quản Lí FY Shop
+    link(rel="stylesheet", href="/public/manager.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .manager-bg
+      nav.manager-menu
+        .menu-left
+          a.logo(href="/")
+            i.fa-solid.fa-store
+            span FY Shop
+          a.active(href="/manager") Quản lý
+        .menu-right
+          a.btn-login(href="/login")
+            i.fa-solid.fa-user
+          a.btn-cart(href="#")
+            i.fa-solid.fa-cart-shopping
+      .manager-breadcrumb
+        i.fa-solid.fa-house
+        span Trang Chủ / Quản Lí
+      .manager-content
+        a.manager-card(href="/products")
+          i.fa-solid.fa-box
+          span Quản lí sản phẩm
+        a.manager-card(href="/users")
+          i.fa-solid.fa-users
+          span Quản lí người dùng

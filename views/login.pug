@@ -1,0 +1,23 @@
+html
+  head
+    title Login
+    link(rel="icon", type="image/png", href="/public/upload/login.jpg")
+    link(rel="stylesheet", href="/public/login.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .login-container
+      img.login-logo(src="/public/image/login.jpg", alt="Login Logo")
+      h2.login-title Chào Mừng Trở Lại!
+      if message
+        div.login-error= message
+      else
+        div.login-desc Đăng nhập để tiếp tục mua sắm cùng FY Shop
+      form.login-form(method="post" action=url ? `/login?url=${url}` : "/login")
+        input(type="text" name="username" placeholder="Gmail Hoặc SĐT" value=username?username:'')
+        input(type="password" name="password" placeholder="Mật khẩu")
+        input.login-btn(type="submit" value="Đăng Nhập")
+      .login-links
+        a(href="#") Quên mật khẩu?
+        a(href="/create-user") Đăng ký tài khoản mới

@@ -1,0 +1,50 @@
+html
+  head
+    title Quản Lý Người Dùng - FY Shop
+    link(rel="stylesheet", href="/public/user.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .user-bg
+      nav.user-menu
+        .menu-left
+          a.logo(href="/")
+            i.fa-solid.fa-store
+            span FY Shop
+          a(href="/manager") Quản lý
+        .menu-right
+          a.btn-login(href="/login")
+            i.fa-solid.fa-user
+          a.btn-cart(href="#")
+            i.fa-solid.fa-cart-shopping
+      .user-breadcrumb
+        i.fa-solid.fa-users
+        span Trang Chủ / Quản lý / Người dùng
+      .user-header
+        h2 Quản lý người dùng
+        a.btn-create(href="/create-user")
+          i.fa-solid.fa-user-plus
+          | Tạo tài khoản mới
+      .user-table-wrap
+        table.user-table
+          thead
+            tr
+              th Họ tên
+              th Tên đăng nhập
+              th Quyền
+              th Thao tác
+          tbody
+            each user in users
+              tr
+                td= user.fullname
+                td= user.username
+                td= user.role
+                td.actions
+                  a.btn-edit(href=`/update-user/${user._id}`)
+                    i.fa-solid.fa-pen-to-square
+                    | Sửa
+                  a.btn-delete(href=`/user/${user._id}`)
+                    i.fa-solid.fa-trash
+                    | Xóa

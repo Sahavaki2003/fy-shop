@@ -1,0 +1,111 @@
+body {
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(140, 82, 255, 0.15);
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.login-desc {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 15px;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  border: 1.5px solid #7c3aed;
+  outline: none;
+  background: #fff;
+}
+
+.login-form .login-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #7c3aed 0%, #8b5cf6 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 10px;
+}
+
+.login-form .login-btn:hover {
+  background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.login-error {
+  color: #ef4444;
+  background: #fee2e2;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.login-links a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 0;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-links a:hover {
+  background: #f3f0ff;
+  color: #5b21b6;
+}

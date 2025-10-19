@@ -1,0 +1,125 @@
+/* ====== RESET VÀ PHONG CÁCH CƠ BẢN ====== */
+body {
+  margin: 0;
+  background-color: #f7f9fb;
+  color: #2c3e50;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ====== THANH MENU ====== */
+.menu {
+  background-color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu .list a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 500;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+.menu .list a:hover {
+  color: #fff;
+  background-color: #3498db;
+}
+
+.menu .icon {
+  display: flex;
+  align-items: center;
+}
+
+.menu .icon a i {
+  color: #ecf0f1;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.menu .icon a i:hover {
+  color: #3498db;
+}
+
+/* ====== ĐƯỜNG DẪN TRANG ====== */
+.path {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 50px;
+  font-size: 15px;
+  color: #7f8c8d;
+}
+
+/* ====== KHU VỰC NỘI DUNG ====== */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px auto;
+  max-width: 1100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 30px;
+}
+
+/* ====== HÌNH ẢNH SẢN PHẨM ====== */
+.content-image img {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* ====== THÔNG TIN SẢN PHẨM ====== */
+.content-detail {
+  flex: 1;
+}
+
+.content-detail p:first-child {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.content-detail p:nth-child(2) {
+  color: #7f8c8d;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.content-detail p:nth-child(3) {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 25px;
+}
+
+/* ====== NÚT THÊM GIỎ HÀNG ====== */
+.content-detail a {
+  display: inline-block;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.content-detail a:hover {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  transform: translateY(-2px);
+}

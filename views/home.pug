@@ -1,0 +1,39 @@
+html
+  head
+    title FY Shop - Trang Chủ
+    link(rel="stylesheet", href="/public/home.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .main-bg
+      nav.menu
+        .menu-left
+          a.logo(href="/")
+            i.fa-solid.fa-store
+            span FY Shop
+          a(href="/manager") Quản lý
+        .menu-right
+          a.btn-login(href="/login")
+            i.fa-solid.fa-user
+            span Đăng nhập
+          a.btn-cart(href="#")
+            i.fa-solid.fa-cart-shopping
+            span Giỏ hàng
+      .breadcrumb
+        i.fa-solid.fa-house
+        span Trang Chủ / Áo Sơ Mi Nam
+      .products
+        each product in products
+          .product-card
+            .product-img
+              img(src=product.image, alt=product.name)
+            .product-info
+              h3.product-name= product.name
+              p.product-desc= product.description
+            .product-bottom
+              span.product-price= product.price
+              a.product-detail(href=`/product-detail/${product._id}`)
+                i.fa-solid.fa-arrow-right
+                | Chi Tiết

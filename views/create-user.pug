@@ -1,0 +1,37 @@
+html
+  head 
+    title Đăng Ký Tài Khoản - FY Shop
+    link(rel="stylesheet", href="/public/create-user.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .register-bg
+      .register-card
+        .register-header
+          img.register-logo(src="/public/image/login.jpg", alt="Đăng ký")
+          h2 Đăng ký tài khoản mới
+        form.register-form(method="post", action=url ? `/create-user?url=${url}` : "/user")
+          .input-group
+            i.fa-solid.fa-user
+            input(type="text", name="username", placeholder="Gmail Hoặc SĐT", value=username?username:'', required=true)
+          .input-group
+            i.fa-solid.fa-id-card
+            input(type="text", name="fullname", placeholder="Họ tên", required=true)
+          .input-group
+            i.fa-solid.fa-lock
+            input(type="password", name="password", placeholder="Mật khẩu", required=true)
+          .input-group
+            i.fa-solid.fa-user-shield
+            input(type="text", name="role", placeholder="Quyền", required=true)
+          if notification
+            p.err=notification
+          if notificationPass
+            p.err=notificationPass
+          button.register-btn(type="submit")
+            i.fa-solid.fa-user-plus
+            | Đăng ký
+        a.back-link(href="/login")
+          i.fa-solid.fa-arrow-left
+          | Quay lại đăng nhập

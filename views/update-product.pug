@@ -1,0 +1,24 @@
+html
+  head
+    title Cập Nhật Sản Phẩm
+    link(rel="stylesheet", href="/public/update-product.css")
+  body
+    .container
+      h2 Cập Nhật Sản Phẩm
+      form(action=`/update-product/${product._id}`, method="post", enctype="multipart/form-data")
+        .form-group
+          label Tên sản phẩm
+          input(type="text" name="name" value=product.name required)
+        .form-group
+          label Ảnh sản phẩm
+          input(type="file" name="image")
+          if product.image
+            img.preview(src=`/uploads/${product.image}`, alt="Ảnh hiện tại")
+        .form-group
+          label Mô tả
+          textarea(name="description" rows="4")= product.description
+        .form-group
+          label Giá
+          input(type="number" name="price" value=product.price step="0.01" required)
+        .form-actions
+          input(type="submit" value="Cập Nhật")

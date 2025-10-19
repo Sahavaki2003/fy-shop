@@ -1,0 +1,134 @@
+/* Toàn trang */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #FFD580 0%, #FFAD66 40%, #FF9966 100%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* Hộp chứa form */
+.container {
+  background: #fff;
+  padding: 35px 45px;
+  border-radius: 20px;
+  width: 460px;
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
+  animation: fadeIn 0.6s ease forwards;
+  border: 2px solid rgba(255, 180, 100, 0.25);
+}
+
+/* Tiêu đề */
+h2 {
+  text-align: center;
+  color: #ff7b00;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF8C00, #FFC300);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Nhóm form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-weight: 600;
+  color: #5a4636;
+  margin-bottom: 6px;
+}
+
+/* Input & textarea */
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+  padding: 12px 14px;
+  border: 1.5px solid #ffd8b2;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  background-color: #fffaf3;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff9500;
+  box-shadow: 0 0 6px rgba(255, 149, 0, 0.4);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  line-height: 1.4;
+}
+
+/* Ảnh xem trước */
+.preview {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ffe0c2;
+  box-shadow: 0 2px 6px rgba(255, 150, 50, 0.2);
+}
+
+/* Hành động */
+.form-actions {
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Nút cập nhật */
+input[type="submit"] {
+  background: linear-gradient(90deg, #FF8C00, #FFC300);
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 150, 0, 0.3);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #ff9d1a, #ffd54f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 150, 0, 0.35);
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Hiệu ứng hiện dần */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

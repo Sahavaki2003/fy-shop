@@ -1,0 +1,33 @@
+html
+  head 
+    title Thêm Sản Phẩm - FY Shop
+    link(rel="stylesheet", href="/public/create-product.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .product-bg
+      .product-card
+        .product-header
+          i.fa-solid.fa-plus.product-icon
+          h2 Thêm sản phẩm mới
+        form.form-product(action="/product", method="post", enctype="multipart/form-data")
+          .input-group
+            i.fa-solid.fa-box
+            input(type="text", name="name", placeholder="Tên sản phẩm", required=true)
+          .input-group
+            i.fa-solid.fa-align-left
+            input(type="text", name="description", placeholder="Mô tả", required=true)
+          .input-group
+            i.fa-solid.fa-image
+            input(type="file", name="image", accept="image/*", required=true)
+          .input-group
+            i.fa-solid.fa-money-bill-wave
+            input(type="text", name="price", placeholder="Giá", required=true)
+          button.product-btn(type="submit")
+            i.fa-solid.fa-plus
+            | Thêm sản phẩm
+        a.back-link(href="/products")
+          i.fa-solid.fa-arrow-left
+          | Quay lại danh sách

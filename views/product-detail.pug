@@ -1,0 +1,27 @@
+html
+    head
+        title Chi tiết Sản Phẩm
+        link(rel="stylesheet", href="/public/product-detail.css")
+        link(rel="stylesheet", href="/public/image")
+        link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    body
+        .menu
+            div.list
+                a(href="/") Trang Chủ
+            div.icon
+                .btn-login
+                    a(href="/login")
+                        i.fa-solid.fa-user
+                .btn-giohang
+                    a(href="#")
+                        i.fa-solid.fa-cart-shopping
+        .path
+            p Trang Chủ / Chi Tiết Sản Phẩm
+        .content
+            .content-image
+                img(src=`/${product.image}`)
+            .content-detail
+                p=product.name
+                p=product.description
+                p Giá: #{product.price} VNĐ
+                a(href=`/shopping/${product._id}`) Thêm vào giỏ hàng

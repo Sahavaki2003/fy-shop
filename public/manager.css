@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  color: #454a4c;
+}
+.manager-bg {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+.manager-menu {
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-size: 1.05rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2193b0;
+  text-decoration: none;
+  gap: 8px;
+}
+.logo i {
+  font-size: 1.5rem;
+  color: #2193b0;
+}
+.menu-left a {
+  color: #454a4c;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.menu-left a.active, .menu-left a:hover {
+  background: #e3f0ff;
+  color: #2193b0;
+}
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.btn-login, .btn-cart {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(33,147,176,0.08);
+  font-size: 1.1rem;
+}
+.btn-login:hover, .btn-cart:hover {
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  color: #2193b0;
+}
+.manager-breadcrumb {
+  margin: 32px 0 0 40px;
+  color: #2193b0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.manager-content {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+  margin: 48px 0 0 40px;
+}
+.manager-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,147,176,0.10);
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 32px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #2193b0;
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.2s;
+  position: relative;
+}
+.manager-card i {
+  font-size: 2rem;
+  color: #6dd5ed;
+  transition: color 0.2s;
+}
+.manager-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(33,147,176,0.18);
+  background: #e3f0ff;
+  color: #176ca1;
+}
+.manager-card:hover i {
+  color: #2193b0;
+}

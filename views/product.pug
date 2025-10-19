@@ -1,0 +1,52 @@
+html
+  head
+    title Quản Lý Sản Phẩm - FY Shop
+    link(rel="stylesheet", href="/public/product.css")
+    link(rel="stylesheet", href="/public/fontawesome-free-6.6.0-web/css/all.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap", rel="stylesheet")
+  body
+    .product-bg
+      nav.product-menu
+        .menu-left
+          a.logo(href="/")
+            i.fa-solid.fa-store
+            span FY Shop
+        .menu-right
+          a.btn-login(href="/login")
+            i.fa-solid.fa-user
+          a.btn-cart(href="#")
+            i.fa-solid.fa-cart-shopping
+      .product-breadcrumb
+        i.fa-solid.fa-boxes-stacked
+        span Trang Chủ / Quản lý Sản Phẩm
+      .product-header
+        h2 Quản lý Sản phẩm
+        a.btn-create(href="/create-product")
+          i.fa-solid.fa-plus
+          | Thêm sản phẩm mới
+      .product-table-wrap
+        table.product-table
+          thead
+            tr
+              th Tên Sản Phẩm
+              th Ảnh
+              th Mô Tả
+              th Giá
+              th Thao Tác
+          tbody
+            each product in products
+              tr
+                td= product.name
+                td
+                  img(src=product.image, alt="Ảnh Sản Phẩm")
+                td= product.description
+                td= product.price
+                td.actions
+                  a.btn-edit(href=`update-product/${product._id}`)
+                    i.fa-solid.fa-pen-to-square
+                    | Sửa
+                  a.btn-delete(href=`delete-product/${product._id}`)
+                    i.fa-solid.fa-trash
+                    | Xóa

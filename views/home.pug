@@ -15,9 +15,14 @@ html
             span FY Shop
           a(href="/manager") Quản lý
         .menu-right
-          a.btn-login(href="/login")
-            i.fa-solid.fa-user
-            span Đăng nhập
+          if isLogged
+            a.btn-login(href="/logout")
+              i.fa-solid.fa-right-from-bracket
+              span Đăng xuất
+          else
+            a.btn-login(href="/login")
+              i.fa-solid.fa-user
+              span Đăng nhập
           a.btn-cart(href="#")
             i.fa-solid.fa-cart-shopping
             span Giỏ hàng
